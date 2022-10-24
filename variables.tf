@@ -117,6 +117,18 @@ variable "allow_auto_merge" {
   default     = null
 }
 
+variable "squash_merge_commit_title" {
+  description = "(Optional) Can be PR_TITLE or COMMIT_OR_PR_TITLE for a default squash merge commit title."
+  type        = string
+  default     = null
+}
+
+variable "squash_merge_commit_message" {
+  description = "(Optional) Can be PR_BODY, COMMIT_MESSAGES, or BLANK for a default squash merge commit message"
+  type        = string
+  default     = null
+}
+
 variable "delete_branch_on_merge" {
   description = "(Optional) Whether or not to delete the merged branch after merging a pull request. (Default: false)"
   type        = bool
